@@ -1,6 +1,6 @@
-<div *ngFor="let issue of issues">
-	{{issue.date}}
-<div class="panel panel-default">
-  <div class="panel-body">{{issue.text}}</div>
+<div *ngFor="let group of issues">
+	{{group.date}}
+<div class="panel panel-default" *ngFor="let text of group.text">
+  <div class="panel-body">{{text.name}}<span class="pull-right">{{text.status}}</span></div>
 </div>
 </div>
