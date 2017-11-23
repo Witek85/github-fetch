@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainComponent implements OnInit {
 
+  chosen = 'all';
 	issues: any[] = [
     {
       'date': '12.01.2015',
@@ -53,6 +54,18 @@ export class MainComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+  }
+
+  getIssues() {
+    if (this.chosen === 'all') {
+      // console.log(this.issues);
+      return this.issues.slice();
+    }
+
+    return this.issues.filter((issue) => {
+      return issue.status === this.chosen;
+    });
+
   }
 
 }
