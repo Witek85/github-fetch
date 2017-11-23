@@ -1,0 +1,8 @@
+.bg {
+	background: grey;
+	padding: 20px 0;
+}
+
+.bg .container {
+	background: white;
+}
