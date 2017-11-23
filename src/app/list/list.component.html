@@ -5,7 +5,5 @@
 </div>
 </div> -->
 
-<div class="panel panel-default" *ngFor="let issue of issues">
-	{{issue.date}}
-  <div class="panel-body">{{issue.name}}<span class="pull-right">{{issue.status}}</span></div>
-</div>
+
+<app-item *ngFor="let issue of issues" [issue]="issue"></app-item>
