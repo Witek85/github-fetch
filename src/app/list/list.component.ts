@@ -13,6 +13,10 @@ export class ListComponent implements OnInit {
   ngOnInit() {
   }
 
+	statusChange() {
+		console.log(this);
+	}
+
 }
 
 
