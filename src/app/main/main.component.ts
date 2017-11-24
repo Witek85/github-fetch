@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainComponent implements OnInit {
 
-  chosen = 'all';
+  chosen:string;
 	issues = [
     {'date': '12.01.2015', 'name': 'Lorem ipsum dolor sit amet', 'status': 'open' },
     {'date': '12.01.2015', 'name': 'Maecenas pellentesque', 'status': 'closed' },
@@ -21,13 +21,12 @@ export class MainComponent implements OnInit {
   ngOnInit() {
   }
 
-  onChoose(status) {
-    this.chosen = status;
+  receiveChosen($event) {
+    this.chosen = $event;
   }
 
   getIssues() {
     if (this.chosen === 'all') {
-      console.log(this.issues);
       return this.issues.slice();
     }
 
