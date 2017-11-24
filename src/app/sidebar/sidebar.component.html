@@ -1,5 +1,5 @@
 <ul class="list-group">
-	<li class="list-group-item" (click)="sendChosen('all')" [ngClass]="{active: chosen === 'all'}">All <span class="badge">12</span></li>
-	<li class="list-group-item" (click)="sendChosen('open')" [ngClass]="{active: chosen === 'open'}">Open <span class="badge">5</span></li> 
-	<li class="list-group-item" (click)="sendChosen('closed')" [ngClass]="{active: chosen === 'closed'}">Closed <span class="badge">3</span></li> 
+	<li class="list-group-item" (click)="sendChosen('all')" [ngClass]="{active: chosen === 'all'}">All <span class="badge">{{childIssues.length}}</span></li>
+	<li class="list-group-item" (click)="sendChosen('open')" [ngClass]="{active: chosen === 'open'}">Open <span class="badge">{{childIssuesOpen.length}}</span></li> 
+	<li class="list-group-item" (click)="sendChosen('closed')" [ngClass]="{active: chosen === 'closed'}">Closed <span class="badge">{{childIssuesClosed.length}}</span></li> 
 </ul>

@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-sidebar',
@@ -6,12 +6,15 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./sidebar.component.css']
 })
 export class SidebarComponent implements OnInit {
+  @Input() childIssues: string;
+  @Input() childIssuesOpen: string;
+  @Input() childIssuesClosed: string;
 	@Output() chosen = new EventEmitter<string>();
 
   constructor() { }
 
   ngOnInit() {
-  	this.chosen.emit('all')
+  	this.chosen.emit('all');
   }
 
   sendChosen(status) {

@@ -15,6 +15,12 @@ export class MainComponent implements OnInit {
     {'date': '12.01.2015', 'name': 'Fusce iaculis, purus fringilla', 'status': 'open' },
     {'date': '12.01.2015', 'name': 'Morbi eleifend. Sed eget', 'status': 'open' }
   ];
+  issuesOpen = this.issues.filter((issue) => {
+      return issue.status === 'open';
+    });
+  issuesClosed = this.issues.filter((issue) => {
+      return issue.status === 'closed';
+  });
 
   constructor() { }
 
