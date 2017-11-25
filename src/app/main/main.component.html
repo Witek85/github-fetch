@@ -7,6 +7,6 @@
 		(chosen)="receiveChosen($event)"></app-sidebar>
 	</div>
 	<div class="col-sm-8">
-		<app-list [issues]="getIssues()"></app-list>
+		<app-list (modifiedIssueMain)="ismodifiedIssueMain($event)" [issues]="getIssues()"></app-list>
 	</div>
 </div>

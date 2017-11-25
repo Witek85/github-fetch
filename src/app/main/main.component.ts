@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-main',
@@ -12,8 +12,8 @@ export class MainComponent implements OnInit {
     {'date': '12.01.2015', 'name': 'Lorem ipsum dolor sit amet', 'status': 'open' },
     {'date': '12.01.2015', 'name': 'Maecenas pellentesque', 'status': 'closed' },
     {'date': '12.03.2015', 'name': 'Etiam nunc fringilla aliquet', 'status': 'closed' },
-    {'date': '12.01.2015', 'name': 'Fusce iaculis, purus fringilla', 'status': 'open' },
-    {'date': '12.01.2015', 'name': 'Morbi eleifend. Sed eget', 'status': 'open' }
+    {'date': '12.04.2015', 'name': 'Fusce iaculis, purus fringilla', 'status': 'open' },
+    {'date': '12.05.2015', 'name': 'Morbi eleifend. Sed eget', 'status': 'open' }
   ];
   issuesOpen = this.issues.filter((issue) => {
       return issue.status === 'open';
@@ -29,6 +29,18 @@ export class MainComponent implements OnInit {
 
   receiveChosen($event) {
     this.chosen = $event;
+  }
+
+  ismodifiedIssueMain(event) {
+    // console.log('modifiedIssueMain', event);
+
+    const pos = this.issues.findIndex((iss) => {
+      return iss.name === event.name;
+    });
+
+    this.issues[pos].status = event.status; 
+
+    console.log(this.issues);
   }
 
   getIssues() {
