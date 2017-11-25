@@ -2,8 +2,8 @@
 	<div class="col-sm-4">
 		<app-sidebar 
 		[childIssues]="issues" 
-		[childIssuesOpen]="issuesOpen"
-		[childIssuesClosed]="issuesClosed"
+		[childIssuesOpen]="getIssuesOpen()"
+		[childIssuesClosed]="getIssuesClosed()"
 		(chosen)="receiveChosen($event)"></app-sidebar>
 	</div>
 	<div class="col-sm-8">

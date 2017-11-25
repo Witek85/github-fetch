@@ -8,19 +8,25 @@ import { Component, OnInit, Input } from '@angular/core';
 export class MainComponent implements OnInit {
 
   chosen:string;
-	issues = [
-    {'date': '12.01.2015', 'name': 'Lorem ipsum dolor sit amet', 'status': 'open' },
-    {'date': '12.01.2015', 'name': 'Maecenas pellentesque', 'status': 'closed' },
-    {'date': '12.03.2015', 'name': 'Etiam nunc fringilla aliquet', 'status': 'closed' },
-    {'date': '12.04.2015', 'name': 'Fusce iaculis, purus fringilla', 'status': 'open' },
-    {'date': '12.05.2015', 'name': 'Morbi eleifend. Sed eget', 'status': 'open' }
+  issues = [
+  {'date': '12.01.2015', 'name': 'Lorem ipsum dolor sit amet', 'status': 'open' },
+  {'date': '12.01.2015', 'name': 'Maecenas pellentesque', 'status': 'closed' },
+  {'date': '12.03.2015', 'name': 'Etiam nunc fringilla aliquet', 'status': 'closed' },
+  {'date': '12.04.2015', 'name': 'Fusce iaculis, purus fringilla', 'status': 'open' },
+  {'date': '12.05.2015', 'name': 'Morbi eleifend. Sed eget', 'status': 'open' }
   ];
-  issuesOpen = this.issues.filter((issue) => {
+  
+  getIssuesOpen() {
+    return this.issues.filter((issue) => {
       return issue.status === 'open';
     });
-  issuesClosed = this.issues.filter((issue) => {
+  }
+
+  getIssuesClosed() {
+    return this.issues.filter((issue) => {
       return issue.status === 'closed';
-  });
+    });
+  }
 
   constructor() { }
 
@@ -40,24 +46,29 @@ export class MainComponent implements OnInit {
 
     this.issues[pos].status = event.status; 
 
-    console.log(this.issues);
-    console.log(this.issues.filter((issue) => {
-      return issue.status === 'open';
-    }) );
-    console.log(this.issues.filter((issue) => {
-      return issue.status === 'closed';
-    }) );
+    // console.log(this.issues);
+    // console.log(this.issuesOpen);
+    // console.log(this.issuesClosed);
+
+    // console.log(this.issues.filter((issue) => {
+    //   return issue.status === 'open';
+    // }) );
+
+    // this.issuesOpen
+    // console.log(this.issues.filter((issue) => {
+      //   return issue.status === 'closed';
+      // }) );
+}
+
+getIssues() {
+  if (this.chosen === 'all') {
+    return this.issues.slice();
   }
 
-  getIssues() {
-    if (this.chosen === 'all') {
-      return this.issues.slice();
-    }
+  return this.issues.filter((issue) => {
+    return issue.status === this.chosen;
+  });
 
-    return this.issues.filter((issue) => {
-      return issue.status === this.chosen;
-    });
-
-  }
+}
 
 }
