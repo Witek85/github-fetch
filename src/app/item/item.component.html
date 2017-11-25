@@ -1,10 +1,10 @@
-<div class="panel panel-default">
 {{issue.date}}
+<div class="panel panel-default">
 <div class="panel-body">{{issue.name}}
-	<input type="checkbox" 
+	<input type="checkbox" class="pull-right" 
 	[checked]="issue.status === 'closed'" 
 	(click)="toggle(issue.status)" />
-	<span class="pull-right">{{issue.status}}</span>
+	<!-- <span class="pull-right">{{issue.status}}</span> -->
 </div>
 </div>
 
