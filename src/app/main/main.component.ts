@@ -41,6 +41,12 @@ export class MainComponent implements OnInit {
     this.issues[pos].status = event.status; 
 
     console.log(this.issues);
+    console.log(this.issues.filter((issue) => {
+      return issue.status === 'open';
+    }) );
+    console.log(this.issues.filter((issue) => {
+      return issue.status === 'closed';
+    }) );
   }
 
   getIssues() {
