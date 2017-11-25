@@ -3,7 +3,7 @@ import { Component, OnInit, Input } from '@angular/core';
 @Component({
   selector: 'app-main',
   templateUrl: './main.component.html',
-  styleUrls: ['./main.component.css']
+  styleUrls: ['./main.component.scss']
 })
 export class MainComponent implements OnInit {
 
@@ -15,7 +15,7 @@ export class MainComponent implements OnInit {
   {'date': '12.04.2015', 'name': 'Fusce iaculis, purus fringilla', 'status': 'open' },
   {'date': '12.05.2015', 'name': 'Morbi eleifend. Sed eget', 'status': 'open' }
   ];
-  
+
   getIssuesOpen() {
     return this.issues.filter((issue) => {
       return issue.status === 'open';
