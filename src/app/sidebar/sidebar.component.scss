@@ -1,3 +1,11 @@
+@import '../../assets/styles/main';
+
 .sidebar__group {
-	border: none;
+	// border: none;
+		color: $text-color-sidebar;
+
+		&__item {
+			background: none;
+			border: none;	
+		}
 }

@@ -4,17 +4,16 @@
 	width: $app-width;
 	height: $app-height;
 	background: $sidebar-bg;	
-
 }
 
 .sidebar {
-	
 	padding: 0;
 	height:100%;
 	min-height:100%;
 }
 
 .list {
+	height: $app-height;
 	background: $list-bg;
-		overflow-y: scroll;
+	overflow-y: scroll;
 }
