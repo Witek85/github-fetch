@@ -1,13 +1,17 @@
 @import '../../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap';
 
-	$black: black;
+$black: black;
 
-		body {
-			background-color: $black;
-				// @include make-row();
+$sidebar-bg: rgba(16,16,34,0.8);
+$list-bg: rgba(246,246,246,1);
 
-					@media all and (max-width: $screen-sm-max) {
-						padding: 100px 0;
-							background-color: red;
-							}
-							}
+$app-width: 650px;
+
+body {
+	background-color: $black;
+
+	@media all and (max-width: $screen-sm-max) {
+		padding: 100px 0;
+		background-color: red;
+	}
+}

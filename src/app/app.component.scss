@@ -1,3 +1,5 @@
+@import '../assets/styles/main';
+
 .bg {
 	background: url('/assets/background.jpg');
 	padding: 20px 0;
@@ -5,4 +7,17 @@
 
 .bg .container {
 	background: white;
+}
+
+.app {
+	width: $app-width;
+}
+
+.sidebar {
+	background: $sidebar-bg;
+	padding: 0;
+}
+
+.list {
+	background: $list-bg;
 }

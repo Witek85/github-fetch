@@ -5,7 +5,6 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
-import { MainComponent } from './main/main.component';
 import { ListComponent } from './list/list.component';
 import { ItemComponent } from './item/item.component';
 
@@ -13,7 +12,6 @@ import { ItemComponent } from './item/item.component';
   declarations: [
     AppComponent,
     SidebarComponent,
-    MainComponent,
     ListComponent,
     ItemComponent
   ],
