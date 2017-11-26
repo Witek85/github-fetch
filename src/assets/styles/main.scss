@@ -6,6 +6,7 @@ $sidebar-bg: rgba(16,16,34,0.8);
 $list-bg: rgba(246,246,246,1);
 
 $app-width: 650px;
+$app-height: 500px;
 
 html, body {
 	height: 100%;
@@ -19,7 +20,7 @@ body {
 	padding: 20px 0;
 
 	@media all and (max-width: $screen-sm-max) {
-		padding: 100px 0;
-		background-color: red;
+		// padding: 100px 0;
+		// background-color: red;
 	}
 }

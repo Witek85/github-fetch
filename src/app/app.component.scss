@@ -1,15 +1,14 @@
 @import '../assets/styles/main';
 
-.bg .container {
-	background: white;
-}
-
 .app {
 	width: $app-width;
+	height: $app-height;
+	background: $sidebar-bg;	
+
 }
 
 .sidebar {
-	background: $sidebar-bg;
+	
 	padding: 0;
 	height:100%;
 	min-height:100%;
@@ -17,4 +16,5 @@
 
 .list {
 	background: $list-bg;
+		overflow-y: scroll;
 }

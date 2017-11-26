@@ -10,6 +10,7 @@ export class AppComponent {
 chosen:string;
   issues = [
   {'date': '12.01.2015', 'name': 'Lorem ipsum dolor sit amet', 'status': 'open' },
+  {'date': null, 'name': 'Lorem ipsum dolor sit amet 2', 'status': 'open' },
   {'date': '12.01.2015', 'name': 'Maecenas pellentesque', 'status': 'closed' },
   {'date': '12.03.2015', 'name': 'Etiam nunc fringilla aliquet', 'status': 'closed' },
   {'date': '12.04.2015', 'name': 'Fusce iaculis, purus fringilla', 'status': 'open' },
