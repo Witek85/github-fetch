@@ -1,5 +1,13 @@
-$black: black;
+@import '../../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap';
 
-body {
-	background-color: $black;
-}
+	$black: black;
+
+		body {
+			background-color: $black;
+				// @include make-row();
+
+					@media all and (max-width: $screen-sm-max) {
+						padding: 100px 0;
+							background-color: red;
+							}
+							}
