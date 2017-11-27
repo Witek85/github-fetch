@@ -18,6 +18,9 @@
   text-transform: none;
   line-height: 1;
   speak: none;
+  padding-right: 10px;  
+  position: relative;
+  bottom: -1px;
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -41,8 +44,9 @@
 
 $icons: (
   // // ui
-   left: "\e900",
-   right: "\e901",
+   closed: "\e900",
+   open: "\e902",
+   github: "\e901",
 
 );
 

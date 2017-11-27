@@ -10,8 +10,12 @@
 	    padding: 20px 15px;
     	cursor: pointer;
 
+  		&:hover {
+  			background: $text-bg-sidebar-hover;
+  		}
+
     	&__badge {
-    		padding: 0;
+    		padding: 1px 5px;
     		background: none;
   			color: $text-color-date;
   			font-size: $main-font-size;

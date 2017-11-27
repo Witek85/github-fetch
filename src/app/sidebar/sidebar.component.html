@@ -1,11 +1,14 @@
 <ul class="list-group sidebar__group">
-	<li class="list-group-item sidebar__group__item" (click)="sendChosen('all')" [ngClass]="{active: chosen === 'all'}">All 
+	<li class="list-group-item sidebar__group__item" (click)="sendChosen('all')" [ngClass]="{active: chosen === 'all'}">
+		<span class="icon-github"></span>All 
 		<span class="badge sidebar__group__item__badge">{{childIssues.length}}</span>
 	</li>
-	<li class="list-group-item sidebar__group__item" (click)="sendChosen('open')" [ngClass]="{active: chosen === 'open'}">Open 
+	<li class="list-group-item sidebar__group__item" (click)="sendChosen('open')" [ngClass]="{active: chosen === 'open'}">
+		<span class="icon-open"></span>Open 
 		<span class="badge sidebar__group__item__badge">{{childIssuesOpen.length}}</span>
 	</li> 
-	<li class="list-group-item sidebar__group__item" (click)="sendChosen('closed')" [ngClass]="{active: chosen === 'closed'}">Closed 
+	<li class="list-group-item sidebar__group__item" (click)="sendChosen('closed')" [ngClass]="{active: chosen === 'closed'}">
+		<span class="icon-closed"></span>Closed 
 		<span class="badge sidebar__group__item__badge">{{childIssuesClosed.length}}</span>
 	</li> 
 </ul>
