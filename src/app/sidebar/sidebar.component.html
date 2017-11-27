@@ -1,5 +1,11 @@
 <ul class="list-group sidebar__group">
-	<li class="list-group-item sidebar__group__item" (click)="sendChosen('all')" [ngClass]="{active: chosen === 'all'}">All <span class="badge">{{childIssues.length}}</span></li>
-	<li class="list-group-item sidebar__group__item" (click)="sendChosen('open')" [ngClass]="{active: chosen === 'open'}">Open <span class="badge">{{childIssuesOpen.length}}</span></li> 
-	<li class="list-group-item sidebar__group__item" (click)="sendChosen('closed')" [ngClass]="{active: chosen === 'closed'}">Closed <span class="badge">{{childIssuesClosed.length}}</span></li> 
+	<li class="list-group-item sidebar__group__item" (click)="sendChosen('all')" [ngClass]="{active: chosen === 'all'}">All 
+		<span class="badge sidebar__group__item__badge">{{childIssues.length}}</span>
+	</li>
+	<li class="list-group-item sidebar__group__item" (click)="sendChosen('open')" [ngClass]="{active: chosen === 'open'}">Open 
+		<span class="badge sidebar__group__item__badge">{{childIssuesOpen.length}}</span>
+	</li> 
+	<li class="list-group-item sidebar__group__item" (click)="sendChosen('closed')" [ngClass]="{active: chosen === 'closed'}">Closed 
+		<span class="badge sidebar__group__item__badge">{{childIssuesClosed.length}}</span>
+	</li> 
 </ul>

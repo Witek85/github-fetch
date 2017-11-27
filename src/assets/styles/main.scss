@@ -1,30 +1,25 @@
 @import '../../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap';
 @import url(//fonts.googleapis.com/css?family=Roboto&subset=latin-ext);
 
-$black: black;
-
-$sidebar-bg: rgba(16,16,34,0.8);
-$list-bg: rgba(246,246,246,1);
-
-$app-width: 650px;
-$app-height: 500px;
-
-$text-color-main: #080606;
-$text-color-sidebar: #ffffff;
-
-$main-font-family: 'Roboto', sans-serif;
+@import "_variables";
+@import "_icons";
 
 html, body {
 	height: 100%;
-	font-family: $main-font-family;
+	font-size: $main-font-size;
 }
 
 body {
 	background-color: $black;
 	min-height: 100%;	
 	background: $black url('/assets/background.jpg') no-repeat center center;
-	background-size: 100% 100%;
 	padding: 20px 0;
+  // color: $text-color;
+  font-family: $main-font-family;
+  font-weight: $main-font-weight;
+  line-height: $main-font-line-height;
+
+  position: relative;
 
  	display: flex;
   align-items: center;
@@ -35,3 +30,4 @@ body {
 		// background-color: red;
 	}
 }
+

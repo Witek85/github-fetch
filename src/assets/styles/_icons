@@ -1,0 +1,59 @@
+ @font-face {
+   font-family: 'icons';
+   font-weight: normal;
+   font-style: normal;
+   src: url('/assets/fonts/icomoon.eot?r136ue');
+   src: url('/assets/fonts/icomoon.eot?r136ue#iefix') format('embedded-opentype'),
+        url('/assets/fonts/icomoon.ttf?r136ue') format('truetype'),
+        url('/assets/fonts/icomoon.woff?r136ue') format('woff'),
+        url('/assets/fonts/icomoon.svg?r136ue#icomoon') format('svg');
+ }
+
+%icon-base {
+  font-family: 'icons';
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
+
+  text-transform: none;
+  line-height: 1;
+  speak: none;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  &:before {
+    padding: 1px;
+  }
+}
+
+[class^="icon-"] {
+  @extend %icon-base;
+}
+
+@mixin icon($name, $code) {
+  .icon-#{$name} {
+    &:before {
+      content: $code;
+    }
+  }
+}
+
+$icons: (
+  // // ui
+   left: "\e900",
+   right: "\e901",
+
+);
+
+@each $name, $code in $icons {
+  @include icon($name, $code);
+}
+
+@function icon($name) {
+  @if map-has-key($icons, $name) {
+    @return map-get($icons, $name);
+  }
+
+  @warn "Unkown icon: '#{$name}'!";
+}

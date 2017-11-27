@@ -1,13 +1,8 @@
-{{issue.date}}
-<div class="panel panel-default">
-<div class="panel-body">{{issue.name}}
-	<input type="checkbox" class="pull-right" 
-	[checked]="issue.status === 'closed'" 
-	(click)="toggle(issue.status)" />
-	<!-- <span class="pull-right">{{issue.status}}</span> -->
+<span class="item__date">{{issue.date}}</span>
+<div class="panel panel-default item__panel">
+	<div class="panel-body item__panel__body">{{issue.name}}
+		<input type="checkbox" class="pull-right" 
+		[checked]="issue.status === 'closed'" 
+		(click)="toggle(issue.status)" />
+	</div>
 </div>
-</div>
-
-
- <!-- [ngClass]="{'active': isClosed()}" -->
- <!-- [checked]="{true: isChecked()}"  -->

@@ -7,5 +7,16 @@
 		&__item {
 			background: none;
 			border: none;	
+	    padding: 20px 15px;
+    	cursor: pointer;
+
+    	&__badge {
+    		padding: 0;
+    		background: none;
+  			color: $text-color-date;
+  			font-size: $main-font-size;
+				font-weight: $main-font-weight;
+
+    	}	
 		}
 }
