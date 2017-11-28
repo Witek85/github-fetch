@@ -10,11 +10,15 @@ export class AppComponent {
 chosen:string;
   issues = [
   {'date': '12.01.2015', 'name': 'Lorem ipsum dolor sit amet', 'status': 'open' },
-  {'date': null, 'name': 'Lorem ipsum dolor sit amet 2', 'status': 'open' },
   {'date': '12.01.2015', 'name': 'Maecenas pellentesque', 'status': 'closed' },
   {'date': '12.03.2015', 'name': 'Etiam nunc fringilla aliquet', 'status': 'closed' },
   {'date': '12.04.2015', 'name': 'Fusce iaculis, purus fringilla', 'status': 'open' },
-  {'date': '12.05.2015', 'name': 'Morbi eleifend. Sed eget', 'status': 'open' }
+  {'date': '12.05.2015', 'name': 'Morbi eleifend. Sed eget', 'status': 'open' },
+  {'date': '12.06.2015', 'name': 'Lorem ipsum dolor sit amet', 'status': 'open' },
+  {'date': '12.08.2015', 'name': 'Maecenas pellentesque', 'status': 'closed' },
+  {'date': '12.09.2015', 'name': 'Etiam nunc fringilla aliquet', 'status': 'closed' },
+  {'date': '12.10.2015', 'name': 'Fusce iaculis, purus fringilla', 'status': 'open' },
+  {'date': '12.12.2015', 'name': 'Morbi eleifend. Sed eget', 'status': 'open' }
   ];
 
   getIssuesOpen() {

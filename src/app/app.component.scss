@@ -5,6 +5,12 @@
 	height: $app-height;
 	background: $sidebar-bg;	
 	border-radius: 10px;
+
+	@media all and (max-width: $screen-sm-max) {
+		width: auto;
+		height: auto;	
+		border-radius: 0;
+	}
 		
 }
 
@@ -20,4 +26,12 @@
 	overflow-y: scroll;
 	border-top-right-radius: 10px;
 	border-bottom-right-radius: 10px;
+
+	@media all and (max-width: $screen-sm-max) {
+		height: auto;	
+		overflow-y: auto;
+		border-top-right-radius: 0;
+		border-bottom-right-radius: 0;
+		padding-bottom: 15px;
+	}
 }

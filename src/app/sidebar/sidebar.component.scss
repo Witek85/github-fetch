@@ -4,6 +4,10 @@
 	// border: none;
 		color: $text-color-sidebar;
 
+		@media all and (max-width: $screen-sm-max) {
+			margin: 0;
+		}
+
 		&__item {
 			background: none;
 			border: none;	
