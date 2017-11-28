@@ -38,4 +38,22 @@ body {
 
 }
 
+.dots {
+	padding: 15px;
 
+	@media all and (max-width: $screen-sm-max) {
+		display: none;
+	}
+}
+
+.dot {
+	width: 10px;
+	height: 10px;
+	display: inline-block;
+	border-radius: 10px;
+  margin-right: 5px;
+
+	&.dot-red {background-color: $dot-bg-red}
+	&.dot-yellow {background-color: $dot-bg-yellow}
+	&.dot-green {background-color: $dot-bg-green}
+}
