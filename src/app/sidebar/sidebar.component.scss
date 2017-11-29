@@ -4,7 +4,7 @@
 	// border: none;
 		color: $text-color-sidebar;
 
-		@media all and (max-width: $screen-sm-max) {
+		@media all and (max-width: $screen-xs-max) {
 			margin: 0;
 		}
 
@@ -27,6 +27,7 @@
 
         & > .badge {
           background: none;
+          color: $text-color-date;
     		}
       }
 

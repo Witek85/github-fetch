@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   
-chosen:string;
+  chosen:string;
   issues = [
   {'date': '12.01.2015', 'name': 'Lorem ipsum dolor sit amet', 'status': 'open' },
   {'date': '12.01.2015', 'name': 'Maecenas pellentesque', 'status': 'closed' },
@@ -43,7 +43,6 @@ chosen:string;
   }
 
   ismodifiedIssueMain(event) {
-    // console.log('modifiedIssueMain', event);
 
     const pos = this.issues.findIndex((iss) => {
       return iss.name === event.name;
@@ -51,29 +50,17 @@ chosen:string;
 
     this.issues[pos].status = event.status; 
 
-    // console.log(this.issues);
-    // console.log(this.issuesOpen);
-    // console.log(this.issuesClosed);
-
-    // console.log(this.issues.filter((issue) => {
-    //   return issue.status === 'open';
-    // }) );
-
-    // this.issuesOpen
-    // console.log(this.issues.filter((issue) => {
-      //   return issue.status === 'closed';
-      // }) );
-}
-
-getIssues() {
-  if (this.chosen === 'all') {
-    return this.issues.slice();
   }
 
-  return this.issues.filter((issue) => {
-    return issue.status === this.chosen;
-  });
+  getIssues() {
+    if (this.chosen === 'all') {
+      return this.issues.slice();
+    }
 
-}
+    return this.issues.filter((issue) => {
+      return issue.status === this.chosen;
+    });
+
+  }
   
 }

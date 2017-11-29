@@ -1,59 +1,9 @@
 @import '../../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap';
 @import url(//fonts.googleapis.com/css?family=Roboto&subset=latin-ext);
 
-@import "_variables";
-@import "_icons";
-@import "_forms";
+@import "config/_variables";
 
-html, body {
-	height: 100%;
-	font-size: $main-font-size;
-
-	@media all and (max-width: $screen-sm-max) {
-		height: auto;
-	}
-}
-
-body {
-	background-color: $black;
-	min-height: 100%;	
-	background: $black url('/assets/background.jpg') no-repeat center center;
-	padding: 20px 0;
-  font-family: $main-font-family;
-  font-weight: $main-font-weight;
-  line-height: $main-font-line-height;
-  position: relative;
-
- 	display: flex;
-  align-items: center;
-  justify-content: center;
-
-	@media all and (max-width: $screen-sm-max) {
-		display: block;
-    padding: 20px;
-  	background-position: top;
-	 	background-attachment: fixed;
-	}
-
-}
-
-.dots {
-	padding: 15px;
-
-	@media all and (max-width: $screen-sm-max) {
-		display: none;
-	}
-
-	.dot {
-		width: 10px;
-		height: 10px;
-		display: inline-block;
-		border-radius: 10px;
-		margin-right: 5px;
-
-		&.dot-red {background-color: $dot-bg-red}
-		&.dot-yellow {background-color: $dot-bg-yellow}
-		&.dot-green {background-color: $dot-bg-green}
-	}
-}
-
+@import "layout/_icons";
+@import "layout/_forms";
+@import "layout/_dots";
+@import "layout/_base";

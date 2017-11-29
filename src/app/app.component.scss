@@ -6,7 +6,7 @@
 	background: $sidebar-bg;	
 	border-radius: 10px;
 
-	@media all and (max-width: $screen-sm-max) {
+	@media all and (max-width: $screen-xs-max) {
 		width: auto;
 		height: auto;	
 		border-radius: 0;
@@ -27,7 +27,7 @@
 	border-top-right-radius: 10px;
 	border-bottom-right-radius: 10px;
 
-	@media all and (max-width: $screen-sm-max) {
+	@media all and (max-width: $screen-xs-max) {
 		height: auto;	
 		overflow-y: auto;
 		border-top-right-radius: 0;
