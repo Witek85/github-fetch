@@ -10,6 +10,7 @@ export class SidebarComponent implements OnInit {
   @Input() childIssuesOpen: string;
   @Input() childIssuesClosed: string;
 	@Output() chosen = new EventEmitter<string>();
+  chosenSidebar = 'all';
 
   constructor() { }
 
@@ -18,6 +19,7 @@ export class SidebarComponent implements OnInit {
   }
 
   sendChosen(status) {
+    this.chosenSidebar = status;
   	this.chosen.emit(status)
   }
 

@@ -19,11 +19,9 @@ body {
 	min-height: 100%;	
 	background: $black url('/assets/background.jpg') no-repeat center center;
 	padding: 20px 0;
-  // color: $text-color;
   font-family: $main-font-family;
   font-weight: $main-font-weight;
   line-height: $main-font-line-height;
-
   position: relative;
 
  	display: flex;
@@ -45,16 +43,17 @@ body {
 	@media all and (max-width: $screen-sm-max) {
 		display: none;
 	}
+
+	.dot {
+		width: 10px;
+		height: 10px;
+		display: inline-block;
+		border-radius: 10px;
+		margin-right: 5px;
+
+		&.dot-red {background-color: $dot-bg-red}
+		&.dot-yellow {background-color: $dot-bg-yellow}
+		&.dot-green {background-color: $dot-bg-green}
+	}
 }
 
-.dot {
-	width: 10px;
-	height: 10px;
-	display: inline-block;
-	border-radius: 10px;
-  margin-right: 5px;
-
-	&.dot-red {background-color: $dot-bg-red}
-	&.dot-yellow {background-color: $dot-bg-yellow}
-	&.dot-green {background-color: $dot-bg-green}
-}
