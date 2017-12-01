@@ -28,9 +28,6 @@ export class SidebarComponent implements OnInit {
 
   ngOnInit() {
   	this.chosen.emit('all');
-    console.log(this.gitService.getIssues('all').length);
-    console.log(this.gitService.getIssues('open').length);
-    console.log(this.gitService.getIssues('closed').length);
   }
 
   sendChosen(status) {

@@ -28,16 +28,19 @@ export class GithubService {
 		});
 	}
 
-	getIssuesOpen() {
-		return this.issues.filter((issue) => {
-			return issue.status === 'open';
+	onModifyStatus(event) {
+
+		const pos = this.issues.findIndex((iss) => {
+			return iss.name === event.name;
 		});
+
+		this.issues[pos].status = event.status; 
+
+		console.log(this.issues);
+
 	}
 
-	getIssuesClosed() {
-		return this.issues.filter((issue) => {
-			return issue.status === 'closed';
-		});
-	}
+
+
 
 }

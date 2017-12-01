@@ -26,21 +26,6 @@ export class AppComponent {
 
 }
 
-getIssuesOpen() {
-  this.issues = this.gitService.getIssuesOpen();
-  return this.issues;
-    // return this.issues.filter((issue) => {
-    //   return issue.status === 'open';
-    // });
-}
-
-getIssuesClosed() {
-  this.issues = this.gitService.getIssuesClosed();
-  return this.issues;
-    // return this.issues.filter((issue) => {
-    //   return issue.status === 'closed';
-    // });
-}
 
 constructor(gitService: GithubService) {
   this.gitService = gitService;

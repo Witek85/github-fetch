@@ -1,29 +1,29 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { GithubService } from '../github.service';
 
 @Component({
 	selector: 'app-item',
 	templateUrl: './item.component.html',
 	styleUrls: ['./item.component.scss']
 })
+
 export class ItemComponent implements OnInit {
 	@Input() issue;
-	@Output() modifiedIssue = new EventEmitter<{'date': string, 'name': string, 'status': string }>();
+  gitService: GithubService;
 
-	constructor() { }
+  constructor(gitService: GithubService) {
+    this.gitService = gitService;
+  }
 
 	ngOnInit() {
-	}
-
-	statusChange() {
-		this.issue.status = 'closed';
 	}
 
 	toggle = (arg) => {
 
 		if (arg === 'closed') {
-			this.modifiedIssue.emit({'date': this.issue.date, 'name': this.issue.name, 'status': 'open' },)
+			this.gitService.onModifyStatus({'date': this.issue.date, 'name': this.issue.name, 'status': 'open' })
 		} else {
-			this.modifiedIssue.emit({'date': this.issue.date, 'name': this.issue.name, 'status': 'closed' },)
+			this.gitService.onModifyStatus({'date': this.issue.date, 'name': this.issue.name, 'status': 'closed' })
 		}
 	}
 }
