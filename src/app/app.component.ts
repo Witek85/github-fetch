@@ -6,48 +6,22 @@ import { GithubService } from './github.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
+
 export class AppComponent {
-  
-  chosen:string;
+
   issues = [];
+  chosen = '';
   gitService: GithubService;
 
-  getIssues(chosen) {
+  constructor(gitService: GithubService) {
+    this.gitService = gitService;
+  }
 
-    this.issues = this.gitService.getIssues(this.chosen);
+  ngOnInit() {}
+
+  getIssues() {
+    var chosen = this.gitService.getChosen();
+    this.issues = this.gitService.getIssues(chosen);
     return this.issues;
-    // if (chosen === 'all') {
-    //   return this.issues.slice();
-    // }
-
-    // return this.issues.filter((issue) => {
-    //   return issue.status === chosen;
-    // });
-
-}
-
-
-constructor(gitService: GithubService) {
-  this.gitService = gitService;
-}
-
-ngOnInit() {
-}
-
-receiveChosen($event) {
-  this.chosen = $event;
-}
-
-ismodifiedIssueMain(event) {
-
-  const pos = this.issues.findIndex((iss) => {
-    return iss.name === event.name;
-  });
-
-  this.issues[pos].status = event.status; 
-
-}
-
-
-
+  }
 }

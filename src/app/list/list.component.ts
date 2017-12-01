@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-list',
@@ -6,20 +6,10 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./list.component.scss']
 })
 export class ListComponent implements OnInit {
+
 	@Input() issues;
-  @Output() modifiedIssueMain = new EventEmitter<{'date': string, 'name': string, 'status': string }>();
 
   constructor() { }
 
-  ngOnInit() {
-  }
-
-	statusChange() {
-		console.log(this);
-	}
-
-  onmodifiedIssue(event) {
-    this.modifiedIssueMain.emit(event)
-  }
-
+  ngOnInit() {}
 }

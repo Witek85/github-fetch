@@ -4,16 +4,22 @@
 	<span class="dot dot-green"></span>
 </div>
 <ul class="list-group sidebar__group">
-	<li class="list-group-item sidebar__group__item" (click)="sendChosen('all')" [ngClass]="{active: chosenSidebar === 'all'}">
+	<li class="list-group-item sidebar__group__item" 
+	(click)="onSidebarClick('all')" 
+	[ngClass]="{active: chosenSidebar === 'all'}">
 		<span class="icon-github"></span>All 
-		<span class="badge sidebar__group__item__badge">{{getissues('all')}}</span>
+		<span class="badge sidebar__group__item__badge">{{getIssuesNumber('all')}}</span>
 	</li>
-	<li class="list-group-item sidebar__group__item" (click)="sendChosen('open')" [ngClass]="{active: chosenSidebar === 'open'}">
+	<li class="list-group-item sidebar__group__item" 
+	(click)="onSidebarClick('open')" 
+	[ngClass]="{active: chosenSidebar === 'open'}">
 		<span class="icon-open"></span>Open 
-		<span class="badge sidebar__group__item__badge">{{getissues('open')}}</span>
+		<span class="badge sidebar__group__item__badge">{{getIssuesNumber('open')}}</span>
 	</li> 
-	<li class="list-group-item sidebar__group__item" (click)="sendChosen('closed')" [ngClass]="{active: chosenSidebar === 'closed'}">
+	<li class="list-group-item sidebar__group__item" 
+	(click)="onSidebarClick('closed')" 
+	[ngClass]="{active: chosenSidebar === 'closed'}">
 		<span class="icon-closed"></span>Closed 
-		<span class="badge sidebar__group__item__badge">{{getissues('closed')}}</span>
+		<span class="badge sidebar__group__item__badge">{{getIssuesNumber('closed')}}</span>
 	</li> 
 </ul>

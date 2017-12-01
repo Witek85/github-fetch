@@ -15,6 +15,7 @@ export class GithubService {
 	{'date': '12.10.2015', 'name': 'Etiam blandit suscipit, velit ac', 'status': 'open' },
 	{'date': '12.12.2015', 'name': 'In tempus facilisis', 'status': 'open' }
 	];
+	chosen = 'all';
 
 	constructor() { }
 
@@ -29,18 +30,18 @@ export class GithubService {
 	}
 
 	onModifyStatus(event) {
-
 		const pos = this.issues.findIndex((iss) => {
 			return iss.name === event.name;
 		});
 
 		this.issues[pos].status = event.status; 
-
-		console.log(this.issues);
-
 	}
 
-
-
-
+	getChosen() {
+		return this.chosen;
+	}
+	
+	onSidebarClick(event) {
+		this.chosen = event;
+	}
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { GithubService } from '../github.service';
 
 @Component({
@@ -8,6 +8,7 @@ import { GithubService } from '../github.service';
 })
 
 export class ItemComponent implements OnInit {
+
 	@Input() issue;
   gitService: GithubService;
 
@@ -15,11 +16,9 @@ export class ItemComponent implements OnInit {
     this.gitService = gitService;
   }
 
-	ngOnInit() {
-	}
+	ngOnInit() {}
 
 	toggle = (arg) => {
-
 		if (arg === 'closed') {
 			this.gitService.onModifyStatus({'date': this.issue.date, 'name': this.issue.name, 'status': 'open' })
 		} else {
