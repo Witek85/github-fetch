@@ -9,7 +9,6 @@ export class ListComponent implements OnInit {
 	@Input() issues;
   @Output() modifiedIssueMain = new EventEmitter<{'date': string, 'name': string, 'status': string }>();
 
-
   constructor() { }
 
   ngOnInit() {
@@ -24,6 +23,3 @@ export class ListComponent implements OnInit {
   }
 
 }
-
-
-
