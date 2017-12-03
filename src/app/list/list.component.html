@@ -1,9 +1,9 @@
-<!-- <div *ngFor="let group of issues">
-	{{group.date}}
+<div *ngFor="let group of issues">
+	<span class="item__date">{{group.date}}</span>
 <div class="panel panel-default" *ngFor="let text of group.text">
   <div class="panel-body">{{text.name}}<span class="pull-right">{{text.status}}</span></div>
 </div>
-</div> -->
+</div>
 
 
-<app-item *ngFor="let issue of issues" [issue]="issue"></app-item>
+<!-- <app-item *ngFor="let issue of issues" [issue]="issue"></app-item> -->

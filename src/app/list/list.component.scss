@@ -1,0 +1,16 @@
+@import '../../assets/styles/main';
+
+.item__date {
+display: inline-block;	
+color: $text-color-date;
+font-size: $date-font-size;
+margin: 5px 0 10px; 
+
+&:empty {
+display: none;
+}
+
+&:first-child {
+margin: 10px 0; 
+}
+}
