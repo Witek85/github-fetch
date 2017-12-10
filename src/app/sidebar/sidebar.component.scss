@@ -1,42 +1,42 @@
 @import '../../assets/styles/main';
 
-// .sidebar__group {
-// 	// border: none;
-// 		color: $text-color-sidebar;
+.sidebar__group {
+	// border: none;
+		color: $text-color-sidebar;
 
-// 		@media all and (max-width: $screen-xs-max) {
-// 			margin: 0;
-// 		}
+		@media all and (max-width: $screen-xs-max) {
+			margin: 0;
+		}
 
-// 		&__item {
-// 			background: none;
-// 			border: none;	
-// 	    padding: 20px 15px;
-//     	cursor: pointer;
+		&__item {
+			background: none;
+			border: none;	
+	    padding: 20px 15px;
+    	cursor: pointer;
 
-//   		&:hover, &:focus {
-//   			background: $text-bg-sidebar-hover;
-//   		}
+  		&:hover, &:focus {
+  			background: $text-bg-sidebar-hover;
+  		}
 
-//     	&.active {
-//   			background: $text-bg-sidebar-hover;
+    	&.active {
+  			background: $text-bg-sidebar-hover;
 
-//         &:hover, &:focus {
-//           background: $text-bg-sidebar-hover;
-//         }
+        &:hover, &:focus {
+          background: $text-bg-sidebar-hover;
+        }
 
-//         & > .badge {
-//           background: none;
-//           color: $text-color-date;
-//     		}
-//       }
+        & > .badge {
+          background: none;
+          color: $text-color-date;
+    		}
+      }
 
-//     	&__badge {
-//     		padding: 1px 5px;
-//     		background: none;
-//   			color: $text-color-date;
-//   			font-size: $main-font-size;
-// 				font-weight: $main-font-weight;
-//     	}	
-// 		}
-// }
+    	&__badge {
+    		padding: 1px 5px;
+    		background: none;
+  			color: $text-color-date;
+  			font-size: $main-font-size;
+				font-weight: $main-font-weight;
+    	}	
+		}
+}

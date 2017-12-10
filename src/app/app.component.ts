@@ -33,11 +33,11 @@ export class AppComponent {
     return this.issues;
   }
 
-    getIssuesNumber(side) {
-    return this.gitService.getIssues(side).length;
-  }
+  //   getIssuesNumber(side) {
+  //   return this.gitService.getIssues(side).length;
+  // }
 
-  onSidebarClick(status) {
-    this.gitService.onSidebarClick(status);
-  }
+  // onSidebarClick(status) {
+  //   this.gitService.onSidebarClick(status);
+  // }
 }
