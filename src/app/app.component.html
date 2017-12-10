@@ -9,28 +9,29 @@
 					<span class="dot dot-green"></span>
 				</div>
 				<ul class="list-group sidebar__group">
-					<li class="list-group-item sidebar__group__item" 
-					(click)="onSidebarClick('all')" 
-					[ngClass]="{active: chosenSidebar === 'all'}">
+					<li class="list-group-item sidebar__group__item"
+					routerLinkActive="active"
+      		routerLink="/all" >
 					<span class="icon-github"></span>All 
 					<span class="badge sidebar__group__item__badge">{{getIssuesNumber('all')}}</span>
 					</li>
 					<li class="list-group-item sidebar__group__item" 
-					(click)="onSidebarClick('open')" 
-					[ngClass]="{active: chosenSidebar === 'open'}">
+					routerLinkActive="active"
+      		routerLink="/open" >
 					<span class="icon-open"></span>Open 
 					<span class="badge sidebar__group__item__badge">{{getIssuesNumber('open')}}</span>
 					</li> 
 					<li class="list-group-item sidebar__group__item" 
-					(click)="onSidebarClick('closed')" 
-					[ngClass]="{active: chosenSidebar === 'closed'}">
+					routerLinkActive="active"
+      		routerLink="/closed" >
 					<span class="icon-closed"></span>Closed 
 					<span class="badge sidebar__group__item__badge">{{getIssuesNumber('closed')}}</span>
 					</li> 
 				</ul>
 			</div>
 			<div class="col-xs-12 col-sm-9 col-md-9 col-lg-9 list">
-				<app-list [issues]="getIssues()"></app-list>
+				<!-- <app-list [issues]="getIssues()"></app-list> -->
+				<router-outlet></router-outlet>
 			</div>
 		</div>
 	</div>

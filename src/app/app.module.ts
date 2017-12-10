@@ -2,12 +2,22 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { ListComponent } from './list/list.component';
 import { ItemComponent } from './item/item.component';
 import { GithubService } from './github.service';
+
+const routes = [
+  { path: '', redirectTo: 'all', pathMatch: 'full' },
+  // { path: 'all', component: ListComponent },
+  // { path: 'open', component: ListComponent },
+  // { path: 'closed', component: ListComponent },
+  { path: ':status', component: ListComponent },
+  { path: '**', redirectTo: '/all' }
+];
 
 @NgModule({
   declarations: [
@@ -19,7 +29,8 @@ import { GithubService } from './github.service';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [GithubService],
   bootstrap: [AppComponent]
