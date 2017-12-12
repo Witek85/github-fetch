@@ -10,6 +10,7 @@ import { GithubService } from '../github.service';
 export class ListComponent implements OnInit {
 
 	issues = [];
+	chosen = 'all';
 	activatedRoute: ActivatedRoute;
 	gitService: GithubService;
 
@@ -21,9 +22,14 @@ export class ListComponent implements OnInit {
 	ngOnInit() {
 		this.activatedRoute.params.subscribe(
 			(params) => {
-				this.issues = this.gitService.getIssues(params.status)
+				this.issues = this.gitService.getIssues(params.status);
+				this.chosen = params.status;
 			}
 			);
+		this.gitService.statusChange.subscribe(
+			() => {
+				this.issues = this.gitService.getIssues(this.chosen);
+			});
 	}
 }
 

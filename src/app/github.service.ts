@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Subject } from 'rxjs/Subject';
 
 @Injectable()
 export class GithubService {
@@ -16,6 +17,7 @@ export class GithubService {
 	{'date': '12.12.2015', 'name': 'In tempus facilisis', 'status': 'open' }
 	];
 	chosen = 'all';
+	statusChange = new Subject<void>();
 
 	constructor() { }
 
@@ -35,6 +37,7 @@ export class GithubService {
 		});
 
 		this.issues[pos].status = event.status; 
+		this.statusChange.next();
 	}
 
 	getChosen() {
