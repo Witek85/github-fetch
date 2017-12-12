@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, OnDestroy, Input } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { GithubService } from '../github.service';
 
@@ -13,6 +13,7 @@ export class ListComponent implements OnInit {
 	chosen = 'all';
 	activatedRoute: ActivatedRoute;
 	gitService: GithubService;
+	subscription;
 
 	constructor(activatedRoute: ActivatedRoute, gitService: GithubService) {
 		this.gitService = gitService;
@@ -26,10 +27,14 @@ export class ListComponent implements OnInit {
 				this.chosen = params.status;
 			}
 			);
-		this.gitService.statusChange.subscribe(
+		this.subscription = this.gitService.statusChange.subscribe(
 			() => {
 				this.issues = this.gitService.getIssues(this.chosen);
 			});
+	}
+
+	ngOnDestroy() {
+		this.subscription.unsubscribe();
 	}
 }
 
