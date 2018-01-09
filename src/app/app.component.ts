@@ -7,14 +7,6 @@ import { GithubService } from './github.service';
   styleUrls: ['./app.component.scss']
 })
 
-// router
-// const appRoutes: Routes = [
-//   {path: '', redirectTo: '/search', pathMatch: 'full'},
-//   {path: 'login', component: LoginComponent },
-//   {path: 'dashboard', component: DashboardComponent, canActivate: [OnlyLoggedInGuard]},
-//   {path: 'search', component: SearchComponent, canActivate: [OnlyLoggedInGuard]}
-// ];
-
 export class AppComponent {
 
   issues = [];
@@ -33,11 +25,4 @@ export class AppComponent {
     return this.issues;
   }
 
-  //   getIssuesNumber(side) {
-  //   return this.gitService.getIssues(side).length;
-  // }
-
-  // onSidebarClick(status) {
-  //   this.gitService.onSidebarClick(status);
-  // }
 }

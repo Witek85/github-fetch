@@ -13,9 +13,6 @@ import { AboutComponent } from './about/about.component';
 
 const routes = [
   { path: '', redirectTo: 'all', pathMatch: 'full' },
-  // { path: 'all', component: ListComponent },
-  // { path: 'open', component: ListComponent },
-  // { path: 'closed', component: ListComponent },
   { path: 'about', component: AboutComponent },
   { path: ':status', component: ListComponent },
   { path: '**', redirectTo: '/all' }

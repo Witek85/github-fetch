@@ -37,21 +37,3 @@ export class ListComponent implements OnInit {
 		this.subscription.unsubscribe();
 	}
 }
-
-
-  // characters = [];
-  // activatedRoute: ActivatedRoute;
-  // swService: StarWarsService;
-
-  // constructor(activatedRoute: ActivatedRoute, swService: StarWarsService) {
-  //   this.activatedRoute = activatedRoute;
-  //   this.swService = swService;
-  // }
-
-  // ngOnInit() {
-  //   this.activatedRoute.params.subscribe(
-  //     (params) => {
-  //       this.characters = this.swService.getCharacters(params.side)
-  //     }
-  //   );
-  // }
