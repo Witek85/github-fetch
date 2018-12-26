@@ -1,5 +1,5 @@
 <span class="item__date">{{issue.date}}</span>
-<div class="panel panel-default item__panel">
+<div class="panel panel-default item__panel" *ngFor="let issue of issue.issues">
 	<div class="panel-body item__panel__body">{{issue.name}}
 		<input type="checkbox"
 		name={{issue.name}}
