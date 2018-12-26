@@ -36,9 +36,11 @@ export class GithubService {
 			return this.issues.slice();
 		}
 
-		// return this.issues.filter((issue) => {
-		// 	return issue.status === chosen;
-		// });
+		return this.issues.map((issue) => {
+			return { 'date': issue.date, 'issues': issue.issues.filter((issue) => {
+				return issue.status === chosen
+			})}
+		});
 	}
 
 	onModifyStatus(event) {
