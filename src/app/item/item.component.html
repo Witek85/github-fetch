@@ -5,7 +5,7 @@
 		name={{issue.name}}
 		id={{issue.name}}
 		[checked]="issue.status === 'closed'" 
-		(click)="toggle(issue.status)" />
+		(click)="toggle(issue.name, issue.status)" />
 		<label for={{issue.name}} class="pull-right"></label>
 	</div>
 </div>

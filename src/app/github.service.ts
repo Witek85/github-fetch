@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs/Subject';
+import { filterQueryId } from '@angular/core/src/view/util';
 
 @Injectable()
 export class GithubService {
@@ -44,12 +45,17 @@ export class GithubService {
 	}
 
 	onModifyStatus(event) {
-		// const pos = this.issues.findIndex((iss) => {
-		// 	return iss.name === event.name;
-		// });
 
-		// this.issues[pos].status = event.status; 
-		// this.statusChange.next();
+		const date = this.issues.findIndex((iss) => {
+			return iss.date === event.date;
+		});
+
+		const pos = this.issues[date].issues.findIndex((iss) => {
+			return iss.name === event.name;
+		});
+
+		this.issues[date].issues[pos].status = event.status; 
+		this.statusChange.next();
 	}
 
 	getChosen() {

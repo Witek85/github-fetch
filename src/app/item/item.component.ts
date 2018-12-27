@@ -18,11 +18,11 @@ export class ItemComponent implements OnInit {
 
 	ngOnInit() {}
 
-	toggle = (arg) => {
-		if (arg === 'closed') {
-			this.gitService.onModifyStatus({'date': this.issue.date, 'name': this.issue.name, 'status': 'open' })
+	toggle = (name, status) => {
+		if (status === 'closed') {
+			this.gitService.onModifyStatus({'date': this.issue.date, 'name': name, 'status': 'open' })
 		} else {
-			this.gitService.onModifyStatus({'date': this.issue.date, 'name': this.issue.name, 'status': 'closed' })
+			this.gitService.onModifyStatus({'date': this.issue.date, 'name': name, 'status': 'closed' })
 		}
 	}
 }
